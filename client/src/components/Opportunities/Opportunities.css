@@ -1,0 +1,312 @@
+/* src/pages/Opportunities/Opportunities.css */
+
+.opportunities-page {
+  min-height: 100vh;
+  /* Utilisation de l'image de fond soleil */
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+              url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #1a2e2a;
+}
+
+.opportunities-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header de la page */
+.page-header {
+  margin-bottom: 2rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #064e3b; /* Vert Foncé */
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.page-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+  border-radius: 2px;
+}
+
+.page-header p {
+  color: #166534; /* Vert moyen */
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+/* Section de recherche et filtres */
+.search-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.1);
+  border: 1px solid #d1fae5;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-section:hover {
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.15);
+  border-color: #f97316;
+}
+
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background: #f8fafc;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #f97316; /* Orange */
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  background: white;
+}
+
+.search-btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.2);
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #022c22, #ea580c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Filtres */
+.filters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.filter-group h3 {
+  font-size: 1rem;
+  color: #064e3b; /* Vert Foncé */
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.filter-group h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #f97316; /* Orange */
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  color: #475569;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, #d1fae5, #ffedd5);
+  border-color: #f97316;
+  color: #064e3b;
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+/* Liste des opportunités */
+.opportunities-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.opportunity-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.08);
+  border: 1px solid #d1fae5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.opportunity-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.2);
+  border-color: #f97316;
+}
+
+.opportunity-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #d1fae5;
+  background: linear-gradient(135deg, #f0fdf4, #fff7ed); /* Vert clair → Orange clair */
+}
+
+.opportunity-type {
+  display: inline-block;
+  background: linear-gradient(135deg, #064e3b, #f97316);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  border: none;
+}
+
+.opportunity-title {
+  font-size: 1.4rem;
+  color: #064e3b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.opportunity-body {
+  padding: 1rem 1.5rem;
+}
+
+.opportunity-description {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.opportunity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.meta-value.country {
+  color: #064e3b;
+  font-weight: 700;
+}
+
+.meta-icon {
+  color: #f97316; /* Orange */
+}
+
+.opportunity-footer {
+  padding: 1rem 1.5rem;
+  background: rgba(248, 250, 252, 0.5);
+  border-top: 1px solid #ffedd5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Boutons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  min-width: 140px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+  color: white;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #022c22, #ea580c);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #064e3b;
+  border: 1px solid #d1fae5;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #f0fdf4, #ffedd5);
+  border-color: #f97316;
+}
+
+/* Badges spécifiques */
+.badge-stage { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.badge-emploi { background: #ffedd5; color: #9a3412; border: 1px solid #f97316; }
+.badge-etudes { background: #f0fdf4; color: #064e3b; border: 1px solid #064e3b; }
+
+/* Pagination */
+.page-number.active {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+  color: white;
+}
+
+/* Message vide */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  border: 2px dashed #f97316;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-bar { flex-direction: column; }
+  .opportunity-meta { flex-direction: column; align-items: flex-start; }
+  .btn { width: 100%; }
+}

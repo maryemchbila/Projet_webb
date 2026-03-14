@@ -1,0 +1,169 @@
+/* src/components/About/About.css */
+.about {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a2e2a;
+  /* Image en arrière-plan fixe */
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+              url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #064e3b; /* Vert Foncé */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #166534; /* Vert moyen pour la lisibilité */
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.7); /* Voile blanc translucide */
+}
+
+.mission-text strong {
+  color: #f97316; /* Orange Vivant pour l'emphase */
+  font-weight: 600;
+}
+
+/* Values Section */
+.values-section {
+  padding: 4rem 0;
+  background: rgba(241, 245, 249, 0.5);
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1fae5;
+  backdrop-filter: blur(5px);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: #f97316; /* Bordure Orange au survol */
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.2);
+}
+
+.value-icon {
+  background: linear-gradient(135deg, #d1fae5, #ffedd5); /* Vert clair → Orange clair */
+  color: #064e3b; /* Icône en Vert Foncé */
+}
+
+.value-title {
+  color: #064e3b;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 4rem 0;
+  background: transparent;
+}
+
+.timeline::before {
+  background: #064e3b; /* Ligne de temps en vert */
+  opacity: 0.3;
+}
+
+.timeline-year {
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Dégradé sur les dates */
+  color: white;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1fae5;
+}
+
+.timeline-title {
+  color: #064e3b;
+}
+
+/* Team Section */
+.team-section {
+  padding: 4rem 0;
+  background: rgba(241, 245, 249, 0.6);
+}
+
+.team-card {
+  background: white;
+  border: 1px solid #d1fae5;
+}
+
+.team-card:hover {
+  border-color: #f97316;
+}
+
+.team-avatar {
+  background: linear-gradient(135deg, #064e3b, #f97316); /* Avatar dégradé */
+  color: white;
+}
+
+.team-role {
+  color: #f97316; /* Rôles en Orange */
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); /* Vert très sombre */
+  color: white;
+}
+
+.contact-details h4 {
+  color: #f97316; /* Titres de contact en Orange au lieu de Jaune */
+}
+
+.contact-actions .btn-primary {
+  background: #f97316;
+  color: white;
+}
+
+.contact-actions .btn-primary:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+.contact-actions .btn-secondary:hover {
+  border-color: #f97316;
+  color: #f97316;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .timeline-year {
+    background: #064e3b;
+  }
+}

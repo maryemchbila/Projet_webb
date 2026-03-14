@@ -1,7 +1,29 @@
+// client/tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Couleurs extraites de ton logo
+        primary: {
+          DEFAULT: '#008080', // Le turquoise/vert canard du globe
+          dark: '#005f5f',
+        },
+        secondary: {
+          DEFAULT: '#FFB700', // Le jaune/orange du chemin
+          dark: '#e6a600',
+        },
+        darkblue: '#1a2b4b', // Le bleu foncé du fond ou du texte
+      },
+      fontFamily: {
+        // Assure-toi d'avoir une police moderne (ex: Poppins, Montserrat ou Inter) importée dans ton index.css
+        sans: ['Inter', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }

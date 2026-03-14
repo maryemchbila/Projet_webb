@@ -1,0 +1,172 @@
+/* src/components/Home/Home.css */
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  /* Application de l'image de fond sur toute la page */
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+              url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Styles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #064e3b; /* Vert Foncé */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+  border-radius: 2px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 4rem 0;
+  background: rgba(248, 250, 252, 0.4); /* Semi-transparent */
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.9); /* Effet verre */
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.2);
+  border-color: #f97316; /* Orange au survol */
+}
+
+.service-icon {
+  background: linear-gradient(135deg, #d1fae5, #ffedd5); /* Vert clair → Orange clair */
+  color: #f97316; /* Orange Vivant */
+}
+
+.service-title {
+  color: #064e3b; /* Vert Foncé */
+}
+
+/* Destinations Section */
+.destinations-section {
+  padding: 4rem 0;
+  background: transparent;
+}
+
+.destination-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d1fae5;
+}
+
+.destination-card:hover {
+  border-color: #064e3b; /* Vert au survol */
+  box-shadow: 0 8px 25px rgba(6, 78, 59, 0.15);
+}
+
+.destination-name {
+  color: #064e3b; /* Vert Foncé */
+}
+
+.destination-students {
+  background: linear-gradient(135deg, #064e3b, #f97316); /* Vert → Orange */
+  color: white; /* Blanc pour lisibilité */
+}
+
+.destination-card .btn-outline {
+  color: #064e3b; /* Vert */
+  border: 2px solid #064e3b;
+}
+
+.destination-card .btn-outline:hover {
+  background: linear-gradient(135deg, #064e3b, #f97316);
+  color: white;
+  border-color: transparent;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 0;
+  background: rgba(248, 250, 252, 0.6);
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #d1fae5;
+}
+
+.testimonial-card:hover {
+  border-color: #f97316;
+}
+
+.testimonial-card::before {
+  color: #ffedd5; /* Orange très clair pour les guillemets */
+}
+
+.author-info strong {
+  color: #064e3b; /* Vert Foncé */
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); /* Dégradé Vert très foncé */
+  color: white;
+}
+
+.cta-title {
+  color: white;
+}
+
+.cta-subtitle {
+  color: #d1fae5; /* Vert très pâle */
+}
+
+.cta-actions .btn-primary {
+  background: linear-gradient(90deg, #f97316, #ea580c); /* Orange pur pour le CTA */
+  color: white;
+}
+
+.cta-actions .btn-primary:hover {
+  background: linear-gradient(90deg, #ea580c, #c2410c);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+.cta-actions .btn-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.cta-actions .btn-secondary:hover {
+  border-color: #f97316;
+  background: rgba(249, 115, 22, 0.1);
+}
+
+/* Responsive fixes pour les couleurs */
+@media (max-width: 768px) {
+  .destination-students {
+    background: #f97316; /* Orange uni sur mobile pour plus de clarté */
+  }
+}

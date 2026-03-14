@@ -1,0 +1,242 @@
+/* src/pages/FichePays/FichePays.css */
+
+.fiche-pays {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Image de fond soleil */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+                url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: calc(100vh - 120px);
+    color: #1a2e2a;
+  }
+  
+  .fiche-pays.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #064e3b; /* Vert Foncé */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .fiche-pays-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .fiche-pays-header h1 {
+    font-size: 2.5rem;
+    color: #064e3b; /* Vert Foncé */
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    color: #166534; /* Vert moyen */
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .search-filter-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .search-box {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(6, 78, 59, 0.1);
+    border: 1px solid #d1fae5;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+  }
+  
+  .search-btn {
+    padding: 0 25px;
+    background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .continent-filter {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #d1fae5;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    outline: none;
+    color: #064e3b;
+  }
+  
+  .continent-filter:focus {
+    border-color: #f97316; /* Orange au focus */
+  }
+  
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .country-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(6, 78, 59, 0.1);
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+  }
+  
+  .country-card:hover {
+    transform: translateY(-5px);
+    border-color: #d1fae5;
+  }
+  
+  .country-card.expanded {
+    border-color: #f97316; /* Orange pour l'expansion */
+    box-shadow: 0 5px 25px rgba(249, 115, 22, 0.2);
+  }
+  
+  .country-info h3 {
+    color: #064e3b;
+    font-weight: 700;
+  }
+  
+  .continent-badge {
+    background: #d1fae5; /* Vert très clair */
+    color: #065f46;
+    font-weight: 600;
+  }
+  
+  .view-details-btn {
+    background: #064e3b; /* Vert Foncé */
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  .country-card.expanded .view-details-btn {
+    background: #ea580c; /* Orange foncé quand ouvert */
+  }
+  
+  /* --- Section Détails --- */
+  
+  .visa-item {
+    background: #f0fdf4;
+    border-left: 4px solid #f97316; /* Bordure Orange */
+  }
+  
+  .visa-item h5 {
+    color: #064e3b;
+    font-weight: 700;
+  }
+  
+  /* Coût de la vie - Dégradé Vert/Orange */
+  .cost-item {
+    background: linear-gradient(135deg, #064e3b 0%, #f97316 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  /* Contacts et Conseils */
+  .contact-item {
+    background: #f0fdf4;
+    border: 1px solid #d1fae5;
+  }
+  
+  .contact-name {
+    color: #065f46;
+  }
+  
+  .tips-content {
+    background: #fff7ed; /* Orange ultra clair */
+    border: 1px solid #fed7aa;
+    padding: 20px;
+    color: #9a3412;
+    border-radius: 10px;
+  }
+  
+  /* Boutons d'action */
+  .btn-primary {
+    background: #064e3b;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #022c22;
+  }
+  
+  .btn-secondary {
+    background: #f97316;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background: #ea580c;
+  }
+  
+  /* Section info bas de page */
+  .info-section {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    border: 1px solid #d1fae5;
+  }
+  
+  .info-icon {
+    background: linear-gradient(135deg, #064e3b, #f97316);
+    color: white;
+  }
+  
+  /* Responsive fixes */
+  @media (max-width: 768px) {
+    .search-btn {
+      width: 100%;
+      padding: 12px;
+    }
+  }

@@ -1,0 +1,113 @@
+/* src/components/Dashboard/Dashboard.css */
+
+.dashboard {
+  min-height: 100vh;
+  /* Image en arrière-plan avec un voile léger pour garder le texte lisible */
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+              url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #1a2e2a; /* Vert très sombre pour le texte principal */
+}
+
+.dashboard-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- TEXTE ET TITRES --- */
+
+.dashboard-header h2 {
+  font-size: 1.8rem;
+  color: #064e3b; /* Vert Foncé */
+  margin-bottom: 0.5rem;
+}
+
+.student-name {
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Vert → Orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.dashboard-header h3 {
+  color: #166534; /* Vert moyen */
+}
+
+.section-header h3::after {
+  background: linear-gradient(90deg, #064e3b, #f97316); /* Ligne sous titre */
+}
+
+/* --- CARTES ET BADGES --- */
+
+.opportunity-card, .course-card {
+  background: rgba(255, 255, 255, 0.95); /* Blanc quasi opaque */
+  border: 1px solid #d1fae5;
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.1);
+}
+
+.opportunity-card:hover, .course-card:hover {
+  border-color: #f97316; /* Orange au survol */
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.2);
+}
+
+.new-badge {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+  color: white;
+}
+
+.description {
+  background: linear-gradient(135deg, #f0fdf4, #fff7ed); /* Fond Vert/Orange très pâle */
+  border-left: 4px solid #f97316; /* Bordure Orange */
+}
+
+.status-badge {
+  background: #ffedd5;
+  color: #9a3412; /* Orange Foncé */
+  border: 1px solid #f97316;
+}
+
+/* --- PROGRESSION ET CHARGEMENT --- */
+
+.progress-fill {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #064e3b; /* Vert au lieu du violet */
+}
+
+/* --- BOUTONS ET LIENS --- */
+
+.btn-primary {
+  background: linear-gradient(90deg, #064e3b, #f97316);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #022c22, #ea580c);
+}
+
+.view-all-btn, .improve-link {
+  color: #064e3b; /* Vert au lieu du violet */
+}
+
+.view-all-btn:hover {
+  background-color: rgba(6, 78, 59, 0.1);
+}
+
+.retry-btn {
+  background-color: #064e3b; /* Vert */
+}
+
+.retry-btn:hover {
+  background-color: #022c22;
+}
+
+/* Actions rapides */
+.action-btn:hover {
+  border-color: #f97316;
+  color: #f97316; /* Orange au survol */
+}

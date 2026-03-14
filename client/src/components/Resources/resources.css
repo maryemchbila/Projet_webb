@@ -1,0 +1,286 @@
+/* src/pages/Resources/Resources.css - VERSION UNIFIÉE & HARMONISÉE */
+
+/* =========================================== */
+/* STYLES DE BASE POUR TOUTES LES PAGES RESOURCES */
+/* =========================================== */
+
+.resources-page,
+.subpage-content,
+.page-content {
+    min-height: 100vh;
+    /* Image de fond avec overlay léger pour la lisibilité */
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+                url('../../assets/images/pngtree-abstract-natural-background-view-of-sky-with-rising-sun-image_15685682.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1a2e2a; /* Vert très foncé pour le texte */
+    padding: 2rem 3rem;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header unifié */
+.resources-header,
+.subpage-header {
+    margin-bottom: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+.resources-header h1,
+.subpage-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* Dégradé Vert Foncé vers Orange */
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.resources-header .subtitle,
+.subpage-header .subtitle {
+    font-size: 1.2rem;
+    color: #166534; /* Vert moyen */
+    margin-bottom: 2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Navigation des catégories */
+.category-nav,
+.subpage-nav {
+    background: rgba(255, 255, 255, 0.85); /* Effet de verre */
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(6, 78, 59, 0.08);
+    border: 1px solid rgba(209, 250, 229, 0.5);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+
+.nav-label {
+    color: #166534;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.nav-label:hover {
+    background: #f0fdf4;
+    color: #f97316;
+}
+
+.nav-label.active {
+    background: linear-gradient(135deg, #064e3b, #f97316);
+    color: white;
+    font-weight: 600;
+}
+
+/* =========================================== */
+/* STYLES DE CARTES UNIFIÉS (Effet Glassmorphism) */
+/* =========================================== */
+
+.resource-category-card,
+.skill-test-card,
+.certification-card,
+.cv-resource-card,
+.postbac-card,
+.program-card,
+.featured-card,
+.interpretation-card,
+.tip-card,
+.path-step,
+.process-step,
+.funding-option,
+.faq-item,
+.template-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 12px rgba(6, 78, 59, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Effet de survol harmonisé */
+.resource-category-card:hover, .skill-test-card:hover, .certification-card:hover,
+.cv-resource-card:hover, .postbac-card:hover, .program-card:hover,
+.template-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.2);
+    border-color: #f97316;
+}
+
+/* Ligne colorée en haut */
+.resource-category-card::before, .skill-test-card::before, .certification-card::before,
+.cv-resource-card::before, .postbac-card::before, .program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.resource-category-card:hover::before, .skill-test-card:hover::before {
+    opacity: 1;
+}
+
+/* Couleurs des bordures latérales (Versions Vertes/Orange) */
+.resource-category-card.blue, .skill-test-card.blue { border-left: 4px solid #064e3b; }
+.resource-category-card.orange, .skill-test-card.orange { border-left: 4px solid #f97316; }
+.resource-category-card.green, .skill-test-card.green { border-left: 4px solid #10b981; }
+
+/* =========================================== */
+/* EN-TÊTES ET CONTENU DE CARTES */
+/* =========================================== */
+
+.category-icon, .skill-test-icon, .cert-icon, .postbac-icon {
+    background: linear-gradient(135deg, #f0fdf4, #fff7ed);
+    color: #064e3b;
+}
+
+.category-info h3, .skill-test-info h3, .cert-title-section h3, .postbac-card-info h3 {
+    color: #064e3b;
+}
+
+/* Badges */
+.cert-badge, .featured-badge {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+}
+
+.detail-value.free { color: #10b981; }
+.detail-value.paid { color: #f97316; }
+
+/* =========================================== */
+/* SECTIONS SPÉCIALES (Barres de Stats & Intro) */
+/* =========================================== */
+
+.stats-bar, .ai-stats, .cv-stats, .postbac-stats, .stats-section {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d1fae5;
+    box-shadow: 0 4px 12px rgba(6, 78, 59, 0.1);
+}
+
+.stat-number, .ai-stat-number, .cv-stat-number {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-intro, .postbac-intro, .interpretation-guide, .pro-tips {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d1fae5;
+    border-left: 4px solid #f97316;
+}
+
+/* Titres de sections avec soulignement dégradé */
+.interpretation-guide h3::after, .featured-section h2::after {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+}
+
+/* =========================================== */
+/* BOUTONS UNIFIÉS */
+/* =========================================== */
+
+.explore-btn, .skill-test-actions .btn, .cert-actions .btn,
+.cv-resource-actions .btn, .postbac-actions .btn, .program-actions .btn {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    color: white;
+}
+
+.explore-btn:hover, .skill-test-actions .btn:hover {
+    background: linear-gradient(90deg, #022c22, #ea580c);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* =========================================== */
+/* COMPOSANTS SPÉCIFIQUES (Timeline, Tooltags, etc.) */
+/* =========================================== */
+
+.timeline-item::before {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    box-shadow: 0 0 0 3px #fff7ed;
+}
+
+.timeline-date { color: #f97316; }
+
+.tool-tag {
+    background: linear-gradient(135deg, #f0fdf4, #fff7ed);
+    color: #064e3b;
+    border: 1px solid #fed7aa;
+}
+
+.type-tag.active {
+    background: linear-gradient(90deg, #064e3b, #f97316);
+    color: white;
+}
+
+.resource-link {
+    background: #f0fdf4;
+    color: #064e3b;
+    border: 1px solid #d1fae5;
+}
+
+.resource-link:hover {
+    border-color: #f97316;
+    color: #f97316;
+    background: #fff7ed;
+}
+
+/* =========================================== */
+/* UTILITAIRES & TEMPLATES */
+/* =========================================== */
+
+.cert-features li::before { color: #f97316; }
+
+.template-color.blue { background: #064e3b; } /* Vert foncé au lieu de bleu */
+.template-color.orange { background: #f97316; }
+
+.tip-icon { color: #10b981; }
+
+/* Grilles (Gardées identiques pour la structure) */
+.resources-grid, .skills-grid, .certifications-grid, .cv-resources-grid,
+.postbac-grid, .programs-grid, .faq-grid, .templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resource-category-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Responsive (Intégrité conservée) */
+@media (max-width: 767px) {
+    .resources-page { padding: 1rem; }
+    .resources-header h1 { font-size: 1.8rem; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+}
